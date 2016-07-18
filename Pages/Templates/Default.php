@@ -30,7 +30,7 @@
     </div>
     <ul>
         <li class="active"><a href="#">Home</a></li>
-        <li><a class="glyphicon glyphicon-arrow-right" href="#">&nbsp;Link</a></li>
+        <li><a href="#">Articles</a></li>
         <li><a href="#">Link</a></li>
         <li><a href="#">Link</a></li>
         <li><a href="#">Link</a></li>
