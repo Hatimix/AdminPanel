@@ -22,8 +22,11 @@
     <![endif]-->
 </head>
 <body>
+<?php
+    if (isset($_SESSION["login"])):
+?>
 <div class="row" id="roww">
-	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
         <?php if (isset($nav)): ?>
             <nav class="navbar navbar-vertical">
                 <div id="logo">
@@ -46,7 +49,12 @@
         </section>
     </div>
 </div>
-
+<?php
+    else:
+        header('location: /AdminPanel/index.php?p=login');
+        exit();
+endif;
+?>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="Libs/js/jquery.min.js"></script>
