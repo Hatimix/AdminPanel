@@ -3,7 +3,7 @@ require "Core/Autoloader.php";
 Autoloader::register();
 $db = new Database();
 
-$page = isset($_GET['p']) ? $_GET['p'] : 'Home';
+$page = isset($_GET['p']) ? $_GET['p'] : 'home';
 ob_start();
 if (file_exists("Pages/$page.php"))
 {
