@@ -1,22 +1,22 @@
 <?php
 $errors = array();
-if ($_SERVER['REQUEST_METHOD'] === 'post')
+if ($_SERVER['REQUEST_METHOD'] == 'post')
 {
-    if (isset($_POST['pseudo'],$_POST['password']) && !empty($_POST['pseudo']) && !empty($_POST['password']))
+    var_dump($_POST);
+    /*
+    if (isset($_POST['username'],$_POST['password']))
     {
-        // continue
-        var_dump($_POST);
-    }
-    else
+        echo "<h2>Welcome</h2>";
+    } else
     {
-        // Stop & redirect to login page
-        $errors['emptyLogin'] = "Please verify your entires and re-try again !";
-        header('location: /AdminPanel/?p=login&error='.$errors['emptyLogin']);
-        die();
+        $errors['emptyValue'] = "Please, Entre a values and re-try again !";
+        header('location: ../index.php?p=login&error='.$errors['emptyValue']);
+        exit();
     }
-}
-else
+    */
+} else
 {
-    $errors['notAllowed'] = "Please access to this page trought the login form !";
-    header('location: /AdminPanel/?p=login&error='.$errors['notAllowed']);
+    $errors['notAllowed'] = "Please enter your infos for acces to your account.";
+    header('location: ../index.php?p=login&error='.$errors['notAllowed']);
+    exit();
 }

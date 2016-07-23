@@ -113,4 +113,17 @@ body {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
+#registerLink{
+    text-align: center;
+}
+.msgError{
+    font-size: 13px;
+    display: inline;
+}
+.glyphicon.glyphicon-info-sign{
+    margin-right: 5px;
+}
+button.btn-block[type="submit"]{
+    margin-bottom: 10px;
+}
 /* END LOGIN PAGE */

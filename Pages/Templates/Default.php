@@ -12,7 +12,7 @@
     <link href="Libs/css/style.css" rel="stylesheet">
 
     <!-- Fonts -->
-<!--    <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>-->
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -22,38 +22,9 @@
     <![endif]-->
 </head>
 <body>
+
 <?php
-    if (isset($_SESSION["login"])):
-?>
-<div class="row" id="roww">
-    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-        <?php if (isset($nav)): ?>
-            <nav class="navbar navbar-vertical">
-                <div id="logo">
-                    <h3><a href="/AdminPanel">Admin Area</a></h3>
-                </div>
-                <ul>
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">Articles</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="Core/logout.php">Log out</a></li>
-                </ul>
-            </nav>
-        <?php endif; ?>
-    </div>
-    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-        <section id="content">
-            <?= $content; ?>
-        </section>
-    </div>
-</div>
-<?php
-    else:
-        header('location: /AdminPanel/index.php?p=login');
-        exit();
-endif;
+    echo $content;
 ?>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

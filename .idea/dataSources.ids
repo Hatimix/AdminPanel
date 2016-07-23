@@ -15,38 +15,39 @@
       <schema id="4" name="performance_schema"/>
       <schema id="5" name="phpmyadmin"/>
       <schema id="6" name="test"/>
-      <table id="7" parent="1" name="admin"/>
-      <column id="8" parent="7" name="adminId">
+      <schema id="7" name="Boutique"/>
+      <table id="8" parent="1" name="admin"/>
+      <column id="9" parent="8" name="adminId">
         <mandatory>1</mandatory>
         <data-type>int(11)|0</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="9" parent="7" name="adminPseudo">
+      <column id="10" parent="8" name="adminPseudo">
         <mandatory>1</mandatory>
         <data-type>varchar(100)|0</data-type>
       </column>
-      <column id="10" parent="7" name="adminName">
+      <column id="11" parent="8" name="adminName">
         <mandatory>1</mandatory>
         <data-type>varchar(100)|0</data-type>
       </column>
-      <column id="11" parent="7" name="adminEmail">
+      <column id="12" parent="8" name="adminEmail">
         <mandatory>1</mandatory>
         <data-type>varchar(120)|0</data-type>
       </column>
-      <column id="12" parent="7" name="adminPassword">
+      <column id="13" parent="8" name="adminPassword">
         <mandatory>1</mandatory>
         <data-type>varchar(100)|0</data-type>
       </column>
-      <index id="13" parent="7" name="admin_adminPseudo_uindex">
+      <index id="14" parent="8" name="admin_adminPseudo_uindex">
         <columns>adminPseudo</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <key id="14" parent="7" name="PRIMARY">
+      <key id="15" parent="8" name="PRIMARY">
         <columns>adminId</columns>
         <primary>1</primary>
       </key>
-      <key id="15" parent="7" name="admin_adminPseudo_uindex">
+      <key id="16" parent="8" name="admin_adminPseudo_uindex">
         <columns>adminPseudo</columns>
         <underlying-index>admin_adminPseudo_uindex</underlying-index>
       </key>
